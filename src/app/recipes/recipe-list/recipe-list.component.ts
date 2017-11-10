@@ -15,15 +15,12 @@ export class RecipeListComponent implements OnInit {
     new Recipe('Test Recipe 2', 'Test Description 2', 'https://get.pxhere.com/photo/dish-meal-food-green-mediterranean-vegetable-recipe-healthy-snack-cuisine-food-photography-zucchini-vegetarian-food-delicious-food-rosemary-appetizer-plated-food-beautiful-food-zucchini-wraps-zucchini-slices-fish-fillet-recipe-fish-recipes-1376204.jpg' )
   ];
 
-  loadedRecipe: Recipe;
-
   constructor() { }
 
   ngOnInit() {
   }
 
   onSelectedRecipe(recipe: Recipe){
-    this.loadedRecipe = recipe;
     this.selectedRecipe.emit(recipe);
   }
 

@@ -6,8 +6,12 @@
   </div>
   <div class="col-md-7">
     <app-recipe-detail
-      *ngIf="loadRecipe === true"
+      *ngIf="loadedRecipe; else infoText"
       [selectedRecipe] = "loadedRecipe"
     ></app-recipe-detail>
+    <ng-template #infoText>
+      <p></p>
+      <h3>Please select a recipe</h3>
+    </ng-template>
   </div>
 </div>
