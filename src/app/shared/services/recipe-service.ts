@@ -2,7 +2,7 @@
 import {EventEmitter, Injectable} from "@angular/core";
 
 //My Models
-import {Recipe} from "./recipe.model";
+import {Recipe} from "../../recipes/recipe.model";
 
 @Injectable()
 

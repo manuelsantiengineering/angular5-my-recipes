@@ -4,7 +4,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Recipe } from '../../recipe.model';
 
 //My Services
-import {RecipeService} from "../../recipe-service";
+import {RecipeService} from "../../../shared/services/recipe-service";
 
 @Component({
   selector: 'app-recipe-item',
