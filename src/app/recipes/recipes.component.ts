@@ -21,6 +21,7 @@ export class RecipesComponent implements OnInit {
       .subscribe(
         (recipe: Recipe)=>{
           this.loadedRecipe = recipe;
+          // console.log("Recipes Component: " this.loadedRecipe.name);
         }
       );
   }

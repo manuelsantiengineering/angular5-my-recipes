@@ -25,10 +25,14 @@
         Options <span class="caret"></span>
       </button>
       <ul class="dropdown-menu">
-        <li> <a href="#">Edit Recipe</a> </li>
-        <li> <a href="#">Delete Recipe</a> </li>
+        <li>
+          <a
+            style="cursor: pointer;"
+            [routerLink]="['edit']"
+          >Edit Recipe</a> </li>
+        <li> <a style="cursor: pointer;">Delete Recipe</a> </li>
         <li role="separator" class="divider"></li>
-        <li> <a href="#">Add to Shopping List</a> </li>
+        <li> <a (click)="onAddToShoppingList()" style="cursor: pointer;">Add to Shopping List</a> </li>
       </ul>
     </div>
   </div>
@@ -40,6 +44,15 @@
 </div>
 <div class="row">
   <div class="col-xs-12">
-    Ingredients
+    <ul class="list-group checked-list-box">
+      <li
+        class="list-group-item"
+        style="cursor: pointer"
+        *ngFor="let ingredient of selectedRecipe.ingredients"
+      >
+        {{ingredient.name}}<span class="badge">{{ingredient.amount}}</span>
+      </li>
+
+    </ul>
   </div>
 </div>
