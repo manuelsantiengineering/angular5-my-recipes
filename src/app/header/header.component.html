@@ -55,3 +55,27 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+
+
+<div ng-controller="AppCtrl" ng-cloak>
+  <mat-toolbar>
+    <button mat-button
+      [routerLink]="['/recipes']"
+      routerLinkActive="active"
+    >Recipe Book</button>
+    <button mat-button
+      [routerLink]="['/shopping-list']"
+      routerLinkActive="active"
+    >Shopping</button>
+  </mat-toolbar>
+
+  <!--<mat-list-item md-nav-click="goto('page1')" name="page1">-->
+    <!--Page One-->
+  <!--</mat-list-item>-->
+<!--</mat-nav-list>-->
+</div>
+
+
+
+
+
